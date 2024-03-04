@@ -1,0 +1,8 @@
+<div class="content" [ngClass]="{snapped: buttonState === true}">
+  <h2>{{ content.title | titlecase }}</h2>
+  <a routerLink="..">BACK</a>
+  <img [src]="content.image" [alt]="content.title">
+  <p>Mis en ligne {{ content.createDate | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+  <p>{{ content.description }}</p>
+  <p><button (click)="likeFunction()" [ngStyle]="{'background': 'transparent'}">❤️</button> {{ content.likes }}</p>
+</div>
